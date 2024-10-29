@@ -1,8 +1,30 @@
 <template>
-  <div class="baseBeverage"></div>
+  <div class="baseBeverage" :style="{ backgroundColor: baseColor }"></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from "vue";
+
+const props = defineProps({
+  name: {
+    type: String,
+    default: "Black Tea",
+  },
+});
+
+const baseColor = computed(() => {
+  switch (props.name) {
+    case "Coffee":
+      return "#6F4E37";
+    case "Green Tea":
+      return "#C8E6C9";
+    case "Black Tea":
+      return "#8B4513";
+    default:
+      return "#8B4513";
+  }
+});
+</script>
 
 <style scoped>
 .baseBeverage {
