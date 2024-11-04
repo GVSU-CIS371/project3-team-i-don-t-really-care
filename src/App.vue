@@ -89,6 +89,11 @@ const data = reactive({
 function updateBaseChoice() {
   console.log(data.currentBase);
 }
+
+
+function updateSyrupChoice() {
+  console.log(data.currentSyrup);
+}
 </script>
 
 <style lang="scss">

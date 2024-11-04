@@ -7,7 +7,7 @@
         <Creamer />
       </template>
       <template v-slot:mid>
-        <Syrup />
+        <Syrup :name="syrupChoice"/>
       </template>
       <template v-slot:bottom>
         <Base :name="baseChoice" />
