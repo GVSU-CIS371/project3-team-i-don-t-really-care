@@ -4,6 +4,7 @@
             :isIced="data.currentTemp === 'Cold'"
             :baseChoice="data.currentBase"
             :creamerChoice="data.currentCreamer"
+            :syrupChoice="data.currentSyrup"
         />
 
         <ul>
