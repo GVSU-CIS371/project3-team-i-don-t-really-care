@@ -1,19 +1,19 @@
 <template>
-  <Mug>
-    <Cold v-if="isIced" />
-    <Hot v-else />
-    <Contents>
-      <template v-slot:top>
-        <Creamer />
-      </template>
-      <template v-slot:mid>
-        <Syrup :name="syrupChoice"/>
-      </template>
-      <template v-slot:bottom>
-        <Base :name="baseChoice" />
-      </template>
-    </Contents>
-  </Mug>
+    <Mug>
+        <Cold v-if="isIced" />
+        <Hot v-else />
+        <Contents>
+            <template v-slot:top>
+                <Creamer :name="creamerChoice" />
+            </template>
+            <template v-slot:mid>
+                <Syrup :name="syrupChoice" />
+            </template>
+            <template v-slot:bottom>
+                <Base :name="baseChoice" />
+            </template>
+        </Contents>
+    </Mug>
 </template>
 <script setup lang="ts">
 import Contents from "./Contents.vue";
@@ -25,10 +25,10 @@ import Hot from "./Hot.vue";
 import Cold from "./Cold.vue";
 
 type Props = {
-  isIced: boolean;
-  baseChoice: string;
-  creamerChoice: string;
-  syrupChoice: string;
+    isIced: boolean;
+    baseChoice: string;
+    creamerChoice: string;
+    syrupChoice: string;
 };
 defineProps<Props>();
 </script>
